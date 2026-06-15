@@ -1,0 +1,106 @@
+.hero-bg{
+  min-height:100vh;
+  background:linear-gradient(
+    135deg,
+    #1351b4,
+    #0b2e6d
+  );
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.login-card{
+
+  width:900px;
+  min-height:500px;
+
+  background:white;
+
+  border-radius:16px;
+
+  overflow:hidden;
+
+  display:flex;
+
+  box-shadow:
+  0 15px 40px rgba(0,0,0,.2);
+}
+
+.login-left{
+
+  width:40%;
+
+  background:#1351b4;
+
+  color:white;
+
+  padding:40px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.login-left h1{
+  font-size:48px;
+  margin-bottom:20px;
+}
+
+.login-left span{
+  color:#34d399;
+}
+
+.login-right{
+
+  flex:1;
+
+  padding:50px;
+}
+
+.login-right h2{
+  margin-bottom:25px;
+}
+
+.input-group{
+  margin-bottom:15px;
+}
+
+.input-group input{
+
+  width:100%;
+
+  padding:12px;
+
+  border:1px solid #ccc;
+
+  border-radius:8px;
+}
+
+.btn-primary{
+
+  width:100%;
+
+  padding:12px;
+
+  border:none;
+
+  border-radius:8px;
+
+  background:#1351b4;
+
+  color:white;
+
+  font-size:16px;
+}
+
+.link-area{
+  text-align:center;
+  margin-top:15px;
+}
+
+.link-area a{
+  color:#1351b4;
+  font-weight:bold;
+}
