@@ -1,26 +1,28 @@
 export default function Card({
+  title,
   titulo,
-  descricao
+  value,
+  description,
+  descricao,
+  icon: Icon,
+  children,
+  className = "",
 }) {
+  const cardTitle = title || titulo;
+  const cardDescription = description || descricao;
 
   return (
+    <div className={`card ${className}`}>
+      {Icon ? (
+        <div className="card__icon">
+          <Icon aria-hidden="true" />
+        </div>
+      ) : null}
 
-    <div
-      style={{
-        background: "white",
-        padding: "20px",
-        borderRadius: "10px",
-        boxShadow:
-          "0 2px 8px rgba(0,0,0,.1)"
-      }}
-    >
-
-      <h3>{titulo}</h3>
-
-      <p>{descricao}</p>
-
+      {cardTitle ? <h3 className="card__title">{cardTitle}</h3> : null}
+      {value !== undefined ? <strong className="card__value">{value}</strong> : null}
+      {cardDescription ? <p className="card__description">{cardDescription}</p> : null}
+      {children}
     </div>
-
   );
-
 }

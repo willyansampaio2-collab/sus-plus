@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "default": "sus-plus",
+    "prod": "controlplus-ad4e1",
+    "sus-plus": "controlplus-ad4e1"
+  },
+  "targets": {},
+  "etags": {}
+}

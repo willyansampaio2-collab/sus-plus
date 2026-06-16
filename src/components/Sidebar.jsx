@@ -1,56 +1,55 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import {
+  FaCalendarAlt,
+  FaCalendarPlus,
+  FaChartBar,
+  FaClipboardList,
+  FaHospital,
+  FaNotesMedical,
+  FaTachometerAlt,
+  FaUser,
+  FaUsers,
+} from "react-icons/fa";
+
+const navItems = [
+  { to: "/dashboard", label: "Dashboard", icon: FaTachometerAlt },
+  { to: "/agendar", label: "Agendar", icon: FaCalendarPlus },
+  { to: "/consultas", label: "Consultas", icon: FaClipboardList },
+  { to: "/pacientes", label: "Pacientes", icon: FaUsers },
+  { to: "/especialidades", label: "Especialidades", icon: FaNotesMedical },
+  { to: "/unidades", label: "Unidades", icon: FaHospital },
+  { to: "/relatorios", label: "Relatórios", icon: FaChartBar },
+  { to: "/perfil", label: "Perfil", icon: FaUser },
+];
 
 export default function Sidebar() {
   return (
-    <aside
-      style={{
-        width: "250px",
-        background: "#1351b4",
-        color: "white",
-        minHeight: "100vh",
-        padding: "20px",
-        boxSizing: "border-box"
-      }}
-    >
-      <h2>SUS+</h2>
+    <aside className="sidebar">
+      <div className="sidebar__brand">
+        <FaCalendarAlt aria-hidden="true" />
+        <div>
+          <strong>SUS+</strong>
+          <span>Gestão de consultas</span>
+        </div>
+      </div>
 
-      <nav
-        style={{
-          marginTop: "30px",
-          display: "flex",
-          flexDirection: "column",
-          gap: "15px"
-        }}
-      >
-        <Link
-          to="/dashboard"
-          style={{
-            color: "white",
-            textDecoration: "none"
-          }}
-        >
-          🏠 Início
-        </Link>
+      <nav className="sidebar__nav" aria-label="Navegação principal">
+        {navItems.map((item) => {
+          const Icon = item.icon;
 
-        <Link
-          to="/consultas"
-          style={{
-            color: "white",
-            textDecoration: "none"
-          }}
-        >
-          📋 Minhas Consultas
-        </Link>
-
-        <Link
-          to="/dashboard"
-          style={{
-            color: "white",
-            textDecoration: "none"
-          }}
-        >
-          ➕ Novo Agendamento
-        </Link>
+          return (
+            <NavLink
+              key={item.to}
+              to={item.to}
+              className={({ isActive }) =>
+                isActive ? "sidebar__link sidebar__link--active" : "sidebar__link"
+              }
+            >
+              <Icon aria-hidden="true" />
+              <span>{item.label}</span>
+            </NavLink>
+          );
+        })}
       </nav>
     </aside>
   );
