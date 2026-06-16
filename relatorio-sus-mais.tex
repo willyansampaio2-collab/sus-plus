@@ -1,0 +1,153 @@
+\documentclass[12pt,a4paper]{article}
+
+% ---------------- PACOTES ----------------
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+
+\geometry{a4paper, margin=2.5cm}
+\onehalfspacing
+\setlength{\parindent}{1.25cm}
+
+% ---------------- TÍTULO ----------------
+\title{\textbf{SUS Mais: Sistema de Agendamento de Consultas Online}}
+\author{
+Grupo de Desenvolvimento -- Código de Alta Performance \\
+Instituição de Ensino (substituir) \\
+}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\newpage
+
+\tableofcontents
+\newpage
+
+% ---------------- INTRODUÇÃO ----------------
+\section{Introdução}
+
+O acesso a consultas médicas no Sistema Único de Saúde (SUS) ainda apresenta desafios relacionados à alta demanda, filas presenciais e demora no processo de agendamento.
+
+Diante desse cenário, o sistema \textbf{SUS Mais} foi desenvolvido como uma plataforma web voltada para o agendamento online de consultas médicas, com o objetivo de facilitar o acesso da população aos serviços de saúde e reduzir a necessidade de deslocamento físico até unidades de atendimento.
+
+% ---------------- PROBLEMA ----------------
+\section{Problema}
+
+O modelo tradicional de agendamento de consultas no SUS apresenta diversas limitações:
+
+\begin{itemize}
+    \item Necessidade de comparecimento presencial para marcação;
+    \item Longas filas de espera;
+    \item Sobrecarga de atendentes nas unidades de saúde;
+    \item Dificuldade de acesso para pessoas com mobilidade reduzida;
+    \item Ausência de um sistema digital centralizado e eficiente.
+\end{itemize}
+
+Esses fatores impactam negativamente a eficiência do atendimento público de saúde.
+
+% ---------------- OBJETIVO ----------------
+\section{Objetivo}
+
+O objetivo do SUS Mais é desenvolver um sistema web capaz de:
+
+\begin{itemize}
+    \item Permitir agendamento online de consultas médicas;
+    \item Disponibilizar especialidades médicas de forma organizada;
+    \item Exibir horários disponíveis em tempo real;
+    \item Reduzir filas presenciais nas unidades de saúde;
+    \item Melhorar a experiência do usuário no acesso à saúde pública.
+\end{itemize}
+
+% ---------------- DESCRIÇÃO DO SISTEMA ----------------
+\section{Descrição do Sistema}
+
+O SUS Mais é uma aplicação web desenvolvida para simular e facilitar o processo de agendamento de consultas médicas.
+
+O sistema permite que o usuário:
+
+\begin{itemize}
+    \item Crie uma conta ou realize login;
+    \item Acesse a plataforma de agendamento;
+    \item Escolha a unidade de saúde desejada;
+    \item Selecione a especialidade médica (como cardiologia, dermatologia e clínica geral);
+    \item Visualize horários disponíveis;
+    \item Confirme o agendamento da consulta.
+\end{itemize}
+
+A proposta é oferecer uma interface simples, intuitiva e acessível para todos os usuários.
+
+% ---------------- FUNCIONAMENTO ----------------
+\section{Funcionamento do Sistema}
+
+O fluxo de funcionamento do sistema SUS Mais ocorre da seguinte forma:
+
+\begin{enumerate}
+    \item O usuário acessa a aplicação web;
+    \item Realiza autenticação (login/cadastro);
+    \item Seleciona a unidade de saúde;
+    \item Escolhe a especialidade médica;
+    \item Visualiza os horários disponíveis;
+    \item Confirma o agendamento;
+    \item Recebe a confirmação do sistema.
+\end{enumerate}
+
+Esse fluxo foi projetado para simplificar o processo de marcação de consultas e reduzir etapas burocráticas.
+
+% ---------------- TECNOLOGIAS ----------------
+\section{Tecnologias Utilizadas}
+
+O desenvolvimento do sistema SUS Mais foi realizado utilizando tecnologias modernas de desenvolvimento web, com foco em performance, escalabilidade e experiência do usuário.
+
+As tecnologias utilizadas foram:
+
+\begin{itemize}
+    \item React 19, utilizado para construção da interface do usuário de forma componentizada e reativa;
+    \item Vite, utilizado como ferramenta de build e ambiente de desenvolvimento rápido;
+    \item Firebase Authentication, responsável pelo sistema de autenticação de usuários (login e cadastro);
+    \item React Router, utilizado para gerenciamento de rotas e navegação entre páginas da aplicação;
+    \item Bootstrap, utilizado para estilização e responsividade da interface;
+    \item Axios, utilizado para realização de requisições HTTP para comunicação com APIs;
+    \item React Icons, utilizado para inclusão de ícones na interface de forma prática e padronizada.
+\end{itemize}
+
+% ---------------- BENEFÍCIOS ----------------
+\section{Benefícios}
+
+A implementação do sistema SUS Mais traz diversos benefícios:
+
+\begin{itemize}
+    \item Redução de filas presenciais;
+    \item Maior organização no fluxo de atendimento;
+    \item Facilidade de acesso ao sistema de saúde;
+    \item Otimização do tempo de usuários e profissionais;
+    \item Modernização do processo de agendamento.
+\end{itemize}
+
+% ---------------- TRABALHOS FUTUROS ----------------
+\section{Trabalhos Futuros}
+
+Como melhorias futuras, o sistema pode ser expandido para:
+
+\begin{itemize}
+    \item Aplicativo mobile;
+    \item Notificações automáticas por e-mail ou SMS;
+    \item Integração com prontuário eletrônico;
+    \item Sistema de triagem inteligente;
+    \item Painel administrativo para unidades de saúde.
+\end{itemize}
+
+% ---------------- CONCLUSÃO ----------------
+\section{Conclusão}
+
+O sistema SUS Mais propõe uma solução tecnológica para modernizar o processo de agendamento de consultas no sistema público de saúde.
+
+A proposta visa reduzir burocracias, melhorar a organização e facilitar o acesso da população aos serviços de saúde, demonstrando aplicabilidade prática e potencial de evolução para um sistema real.
+
+\end{document}
